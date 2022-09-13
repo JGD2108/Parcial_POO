@@ -1,1 +1,3 @@
 # Parcial_POO
+## Library Management System
+#### 1. En el uml tenemos 3 clases, biblioteca, usuario y bibliotecaria. El usuario tiene como métodos prestar, devolver o que se muestre que libros se encuentran disponibles. Para esto en la clase biblioteca le pasamos un atributo de tipo lista en el cual tenemos todos los libros de la biblioteca. Ahora la clase bibliotecaria puede añadir un libro o removerlos, para removerlos solo se puede si estan dañados o perdidos. Para verificar si esto se cumple le pasamos al metodo una variable entera, si es 1 esta perdido o dañado, sino no se debe hacer nada.  

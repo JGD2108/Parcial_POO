@@ -1,0 +1,25 @@
+@startuml
+class Library{
+user:User
+librarian:Librarian
+books:list
+}
+
+class User{
+name:str
+----
+borrow(book_name:str,books:list)
+return(book_name:str, books:list)
+display(books)
+}
+
+class Librarian{
+name:str
+----
+upload(book_name, books)
+remove(book_name, books, lost_damaged:int)
+}
+
+Library "1"--*"*"User
+Library "1"--*"1" Librarian
+@enduml
