@@ -1,12 +1,12 @@
 from xmlrpc.client import boolean
 class User: 
-    def __init__(self,name:str):
+    def __init__(self,name:str)->None:
         """
         El usuario solo recibe su nombre
         """
         self.name = name
 
-    def borrow(self, book_name:str, books:list):
+    def borrow(self, book_name:str, books:list)->None:
         """
         como los libros estan en una lista si el usuario desea prestarlo
         solo hay que removerlo
@@ -17,7 +17,7 @@ class User:
             
         return books
 
-    def returns(self, book_name:str, books:list):
+    def returns(self, book_name:str, books:list)->None:
         """
         para devolver un libro solo hay que agregarlo a la lista
         el sw es para que si encontro el libro se cambie a 1 para
@@ -33,17 +33,17 @@ class User:
             books.append(book_name)
             return books
 
-    def display(self,books: list):
+    def display(self,books: list)->None:
         """
         este metodo solo debe mostrar la lista
         """
         print(books)
 
 class Librarian:
-    def __init__(self, name:str):
+    def __init__(self, name:str)->None:
         self.name= name
 
-    def upload(self, books: list, book_name:str):
+    def upload(self, books: list, book_name:str)->None:
         """
         Misma logica para retornar del usuario
         """
@@ -54,7 +54,7 @@ class Librarian:
         if sw==0:
             books.append(book_name)
         
-    def remove(self, books:list, book_name:str, lost_damaged:int):
+    def remove(self, books:list, book_name:str, lost_damaged:int)->None:
         """
         si el libro esta dañado o perdido se debe remover
         esto se verifica si la biliotecaria digita 1 o cualquier 
